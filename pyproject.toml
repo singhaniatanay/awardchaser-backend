@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "awardchaser-backend"
+version = "0.1.0"
+description = "Backend service for award chasing applications"
+authors = ["Your Name <your.email@example.com>"]
+readme = "README.md"
+packages = [{include = "awardchaser_backend"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = "^0.111.0"
+uvicorn = {extras = ["standard"], version = "*"}
+langchain = "*"
+qdrant-client = "*"
+openai = "*"
+python-dotenv = "*"
+playwright = "*"
+redis = "*"
+pydantic = ">=2.0"
+boto3 = "*"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "*"
+httpx = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
