@@ -12,7 +12,10 @@ class Settings:
 
     openai_api_key: str
     qdrant_url: str
+    qdrant_key: str
     s3_bucket: str
+    aws_key: str
+    aws_secret: str
     redis_url: str
 
 
@@ -30,7 +33,10 @@ def load_settings(env_file: str | os.PathLike[str] | None = None) -> Settings:
     return Settings(
         openai_api_key=env.get("OPENAI_API_KEY", ""),
         qdrant_url=env.get("QDRANT_URL", ""),
+        qdrant_key=env.get("QDRANT_KEY", ""),
         s3_bucket=env.get("S3_BUCKET", ""),
+        aws_key=env.get("AWS_KEY", ""),
+        aws_secret=env.get("AWS_SECRET", ""),
         redis_url=env.get("REDIS_URL", ""),
     )
 

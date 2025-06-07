@@ -4,13 +4,15 @@ version = "0.1.0"
 description = "Backend service for award chasing applications"
 authors = ["Your Name <your.email@example.com>"]
 readme = "README.md"
-packages = [{include = "awardchaser_backend"}]
+packages = [{include = "app"}]
 
 [tool.poetry.dependencies]
 python = "^3.9"
 fastapi = "^0.111.0"
 uvicorn = {extras = ["standard"], version = "*"}
 langchain = "*"
+langchain-community = "*"
+langchain-openai = "*"
 qdrant-client = "*"
 openai = "*"
 python-dotenv = "*"
@@ -18,6 +20,7 @@ playwright = "*"
 redis = "*"
 pydantic = ">=2.0"
 boto3 = "*"
+pypdf2 = "*"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "*"
