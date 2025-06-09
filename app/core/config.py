@@ -17,6 +17,7 @@ class Settings:
     aws_key: str
     aws_secret: str
     redis_url: str
+    scraper_api_key: str
 
 
 def _load_env(env_file: str | os.PathLike[str] | None = None) -> dict[str, str]:
@@ -38,6 +39,7 @@ def load_settings(env_file: str | os.PathLike[str] | None = None) -> Settings:
         aws_key=env.get("AWS_KEY", ""),
         aws_secret=env.get("AWS_SECRET", ""),
         redis_url=env.get("REDIS_URL", ""),
+        scraper_api_key=env.get("SCRAPER_API_KEY", ""),
     )
 
 
